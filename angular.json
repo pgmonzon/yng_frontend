@@ -13,7 +13,7 @@
       },
       "root": "projects/yng_front",
       "sourceRoot": "projects/yng_front/src",
-      "prefix": "anms",
+      "prefix": "yng",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
