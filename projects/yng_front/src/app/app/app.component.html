@@ -59,6 +59,7 @@
             <fa-icon icon="cog"></fa-icon>
           </button>
 
+          <!-- Comentado el link a github
           <a [matTooltip]="'yng.header.github' | translate"
              matTooltipPosition="before"
              mat-icon-button
@@ -67,6 +68,7 @@
              target="_blank">
             <fa-icon [icon]="['fab','github']"></fa-icon>
           </a>
+          -->
 
           <span *ngIf="language$ | async as language">
             <mat-select [ngModel]="language" (selectionChange)="onLanguageSelect($event)">
@@ -83,6 +85,7 @@
       </div>
 
       <div class="footer">
+        <!--Comento redes sociales
         <div class="row">
           <div class="col-sm-12 links">
             <a href="https://www.github.com/tomastrajan" target="_blank">
@@ -112,6 +115,7 @@
             </a>
           </div>
         </div>
+        -->
         <div class="row">
           <div class="col-12 signature">
             &#169; <span class="year">{{year}}</span> - Yangee
