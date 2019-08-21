@@ -10,7 +10,7 @@
           routerLinkActive="active">
           {{item.label | translate}}
         </a>
-        <a mat-list-item href="https://github.com/tomastrajan/angular-ngrx-material-starter" target="_blank">
+        <a mat-list-item href="https://github.com/pgmonzon/yangee" target="_blank">
           Github
         </a>
       </mat-nav-list>
@@ -63,7 +63,7 @@
              matTooltipPosition="before"
              mat-icon-button
              class="link d-none d-sm-inline"
-             href="https://github.com/tomastrajan/angular-ngrx-material-starter"
+             href="https://github.com/pgmonzon/yangee"
              target="_blank">
             <fa-icon [icon]="['fab','github']"></fa-icon>
           </a>
@@ -78,7 +78,7 @@
         </mat-toolbar>
       </div>
 
-      <div class="content" [@routeAnimations]="o.isActivated && o.activatedRoute.routeConfig.data && o.activatedRoute.routeConfig.data.title">
+      <div class="content" [@routeAnimations]="o.isActivated && o.activatedRoute.routeConfig.data">
         <router-outlet #o="outlet"></router-outlet>
       </div>
 
