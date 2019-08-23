@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "yng_front": {
+    "admin_yng": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -11,26 +11,26 @@
           "style": "scss"
         }
       },
-      "root": "projects/yng_front",
-      "sourceRoot": "projects/yng_front/src",
+      "root": "projects/admin_yng",
+      "sourceRoot": "projects/admin_yng/src",
       "prefix": "yng",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/yng_front",
-            "index": "projects/yng_front/src/index.html",
-            "main": "projects/yng_front/src/main.ts",
-            "polyfills": "projects/yng_front/src/polyfills.ts",
-            "tsConfig": "projects/yng_front/tsconfig.app.json",
+            "outputPath": "dist/admin_yng",
+            "index": "projects/admin_yng/src/index.html",
+            "main": "projects/admin_yng/src/main.ts",
+            "polyfills": "projects/admin_yng/src/polyfills.ts",
+            "tsConfig": "projects/admin_yng/tsconfig.app.json",
             "aot": false,
             "assets": [
-              "projects/yng_front/src/favicon.ico",
-              "projects/yng_front/src/assets"
+              "projects/admin_yng/src/favicon.ico",
+              "projects/admin_yng/src/assets"
             ],
             "styles": [
-              "projects/yng_front/src/styles-app-loading.scss",
-              "projects/yng_front/src/styles.scss"
+              "projects/admin_yng/src/styles-app-loading.scss",
+              "projects/admin_yng/src/styles.scss"
             ],
             "scripts": []
           },
@@ -38,8 +38,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "projects/yng_front/src/environments/environment.ts",
-                  "with": "projects/yng_front/src/environments/environment.prod.ts"
+                  "replace": "projects/admin_yng/src/environments/environment.ts",
+                  "with": "projects/admin_yng/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -80,34 +80,34 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "yng_front:build"
+            "browserTarget": "admin_yng:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "yng_front:build:production"
+              "browserTarget": "admin_yng:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "yng_front:build"
+            "browserTarget": "admin_yng:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/yng_front/src/test.ts",
-            "polyfills": "projects/yng_front/src/polyfills.ts",
-            "tsConfig": "projects/yng_front/tsconfig.spec.json",
-            "karmaConfig": "projects/yng_front/karma.conf.js",
+            "main": "projects/admin_yng/src/test.ts",
+            "polyfills": "projects/admin_yng/src/polyfills.ts",
+            "tsConfig": "projects/admin_yng/tsconfig.spec.json",
+            "karmaConfig": "projects/admin_yng/karma.conf.js",
             "assets": [
-              "projects/yng_front/src/favicon.ico",
-              "projects/yng_front/src/assets"
+              "projects/admin_yng/src/favicon.ico",
+              "projects/admin_yng/src/assets"
             ],
             "styles": [
-              "projects/yng_front/src/styles-app-loading.scss",
-              "projects/yng_front/src/styles.scss"
+              "projects/admin_yng/src/styles-app-loading.scss",
+              "projects/admin_yng/src/styles.scss"
             ],
             "scripts": []
           },
@@ -115,8 +115,8 @@
             "test": {
               "fileReplacements": [
                 {
-                  "replace": "projects/yng_front/src/environments/environment.ts",
-                  "with": "projects/yng_front/src/environments/environment.test.ts"
+                  "replace": "projects/admin_yng/src/environments/environment.ts",
+                  "with": "projects/admin_yng/src/environments/environment.test.ts"
                 }
               ]
             }
@@ -126,9 +126,9 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/yng_front/tsconfig.app.json",
-              "projects/yng_front/tsconfig.spec.json",
-              "projects/yng_front/e2e/tsconfig.json"
+              "projects/admin_yng/tsconfig.app.json",
+              "projects/admin_yng/tsconfig.spec.json",
+              "projects/admin_yng/e2e/tsconfig.json"
             ],
             "exclude": ["**/node_modules/**"]
           }
@@ -136,17 +136,17 @@
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "projects/yng_front/e2e/protractor.conf.js",
-            "devServerTarget": "yng_front:serve"
+            "protractorConfig": "projects/admin_yng/e2e/protractor.conf.js",
+            "devServerTarget": "admin_yng:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "yng_front:serve:production"
+              "devServerTarget": "admin_yng:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "yng_front"
+  "defaultProject": "admin_yng"
 }
