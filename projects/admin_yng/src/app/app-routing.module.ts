@@ -30,6 +30,11 @@ const routes: Routes = [
       import('./features/examples/examples.module').then(m => m.ExamplesModule)
   },
   {
+    path: 'signin',
+    loadChildren: () =>
+      import('./features/signin/signin.module').then(m => m.SigninModule)
+  },
+  {
     path: '**',
     redirectTo: 'about'
   }

@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1 class="main-heading">{{ 'yng.menu.login' | translate }}</h1>
+    </div>
+  </div>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <mat-card>
+          <div class="row">
+            <mat-form-field class="col" [ngClass]="routeAnimationsElements">
+              <input matInput placeholder="{{ 'yng.examples.form.placeholder1' | translate }}"
+                formControlName="username">
+              <mat-error *ngIf="form.get('username').invalid">
+                {{ 'yng.examples.form.placeholder1' | translate }}
+                {{ 'yng.examples.form.error1' | translate }}
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field class="col" [ngClass]="routeAnimationsElements">
+              <input matInput type="password" placeholder="{{ 'yng.examples.form.placeholder2' | translate }}"
+                formControlName="password">
+              <mat-error *ngIf="form.get('password').invalid">
+                {{ 'yng.examples.form.placeholder2' | translate }}
+                {{ 'yng.examples.form.error1' | translate }}
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="row">
+            <mat-form-field class="col" [ngClass]="routeAnimationsElements">
+              <input matInput placeholder="{{ 'yng.examples.form.placeholder3' | translate }}"
+                formControlName="email" type="email">
+              <mat-error *ngIf="form.get('email').hasError('required')">
+                {{ 'yng.examples.form.placeholder3' | translate }}
+                {{ 'yng.examples.form.error1' | translate }}
+              </mat-error>
+              <mat-error *ngIf="form.get('email').hasError('email')">
+                {{ 'yng.examples.form.placeholder3' | translate }}
+                {{ 'yng.examples.form.error2' | translate }}</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="row buttons d-flex justify-content-between pad">
+            <button type="button" mat-raised-button color="accent" [disabled]="form.get('autosave').value"
+              [ngClass]="routeAnimationsElements" (click)="save()">
+              {{ 'yng.examples.form.save' | translate }}
+            </button>
+            <button type="reset" mat-raised-button (click)="reset()" [ngClass]="routeAnimationsElements">
+              {{ 'yng.examples.form.reset' | translate }}
+            </button>
+          </div>
+        </mat-card>
+      </div>
+    </div>
+  </form>
+</div>
